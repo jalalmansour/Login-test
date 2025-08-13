@@ -15,6 +15,7 @@ import {
   DropdownMenuSubContent,
   DropdownMenuRadioGroup,
   DropdownMenuRadioItem,
+  DropdownMenuGroup,
 } from "@/components/ui/dropdown-menu"
 import { Button } from "@/components/ui/button"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
@@ -84,7 +85,7 @@ export function UserNav({ currentUser, setCurrentUser }: UserNavProps) {
           </DropdownMenuPortal>
         </DropdownMenuSub>
         <DropdownMenuSeparator />
-        <DropdownMenuItem asChild>
+        <DropdownMenuItem>
           <Link href="/">Log out</Link>
         </DropdownMenuItem>
       </DropdownMenuContent>

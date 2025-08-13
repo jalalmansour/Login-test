@@ -25,7 +25,7 @@ export default function LoginPage() {
             <div className="space-y-2">
               <div className="flex items-center">
                 <Label htmlFor="password">Password</Label>
-                <Link href="#" className="ml-auto inline-block text-sm underline" prefetch={false}>
+                <Link href="#" className="ml-auto inline-block text-sm underline">
                   Forgot your password?
                 </Link>
               </div>

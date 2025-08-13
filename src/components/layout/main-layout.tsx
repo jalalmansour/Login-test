@@ -69,7 +69,7 @@ export function MainLayout({ children }: { children: React.ReactNode }) {
           <SidebarMenu>
             {visibleNavItems.map((item) => (
               <SidebarMenuItem key={item.href}>
-                <Link href={item.href} legacyBehavior passHref>
+                <Link href={item.href}>
                   <SidebarMenuButton
                     isActive={pathname === item.href}
                     tooltip={{ children: item.title }}
@@ -83,7 +83,7 @@ export function MainLayout({ children }: { children: React.ReactNode }) {
           </SidebarMenu>
         </SidebarContent>
         <SidebarFooter className="group-data-[collapsible=icon]:hidden">
-            <Link href="#" legacyBehavior passHref>
+            <Link href="#">
                 <SidebarMenuButton>
                     <Settings />
                     <span>Settings</span>
