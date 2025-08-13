@@ -34,28 +34,30 @@ export async function trainingRecommendations(input: TrainingRecommendationsInpu
   return trainingRecommendationsFlow(input);
 }
 
-const trainingRecommendationTool = ai.defineTool({
-  name: 'trainingRecommendationTool',
-  description: 'Determines whether the suggested course aligns with the employee’s role, skills, and experience, and returns a match score (0 to 1).',
-  inputSchema: z.object({
-    employeeRole: z.string().describe('The role of the employee.'),
-    employeeSkills: z.array(z.string()).describe('The skills of the employee.'),
-    pastTrainingHistory: z.string().describe('The past training history of the employee.'),
-    trainingDescription: z.string().describe('A description of the training course.'),
-  }),
-  outputSchema: z.object({
-    reason: z.string().describe('The reasons why the training is or is not a good fit.'),
-    matchScore: z.number().describe('A score between 0 and 1 indicating how well the training matches the employee.'),
-  }),
+const trainingRecommendationTool = ai.defineTool(
+  {
+    name: 'trainingRecommendationTool',
+    description: 'Determines whether the suggested course aligns with the employee’s role, skills, and experience, and returns a match score (0 to 1).',
+    inputSchema: z.object({
+      employeeRole: z.string().describe('The role of the employee.'),
+      employeeSkills: z.array(z.string()).describe('The skills of the employee.'),
+      pastTrainingHistory: z.string().describe('The past training history of the employee.'),
+      trainingDescription: z.string().describe('A description of the training course.'),
+    }),
+    outputSchema: z.object({
+      reason: z.string().describe('The reasons why the training is or is not a good fit.'),
+      matchScore: z.number().describe('A score between 0 and 1 indicating how well the training matches the employee.'),
+    }),
+  },
   async (input) => {
     // Dummy implementation for the tool, replace with actual logic
     const match = Math.random();
     return {
-      reason: `This training has a ${match > 0.5 ? 'good' : 'poor'} match based on the employee's profile.`, 
+      reason: `This training has a ${match > 0.5 ? 'good' : 'poor'} match based on the employee's profile.`,
       matchScore: match,
     };
   }
-});
+);
 
 const prompt = ai.definePrompt({
   name: 'trainingRecommendationsPrompt',
