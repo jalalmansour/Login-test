@@ -1,0 +1,18 @@
+/* Ant Design style overrides */
+/* This file is for customizing Ant Design components */
+
+/* Example: Change primary color */
+/*
+:root {
+  --ant-primary-color: #1890ff;
+}
+*/
+
+/* Example: Customize button styles */
+/*
+.ant-btn-primary {
+  border-radius: 20px;
+}
+*/
+
+/* Add your custom Ant Design styles here */

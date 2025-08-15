@@ -26,7 +26,7 @@
     workspace = {
       onCreate = {
         default.openFiles = [
-          "src/app/page.tsx"
+          "ehc-formation-system/frontend/src/App.jsx"
         ];
       };
     };
@@ -34,7 +34,7 @@
     previews = {
       enable = true;
       previews = {
-        web = {
+        web = {    workingDirectory = "/ehc-formation-system/frontend";
           command = ["npm" "run" "dev" "--" "--port" "$PORT" "--hostname" "0.0.0.0"];
           manager = "web";
         };

@@ -1,0 +1,56 @@
+@import '~antd/dist/antd.css';
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f0f2f5; /* Light gray background */
+}
+
+#root {
+  height: 100%;
+}
+
+.container {
+  padding: 20px;
+}
+
+.ant-btn-primary {
+  background-color: #3498db; /* Deep sky blue primary button */
+  border-color: #3498db;
+}
+
+.ant-btn-primary:hover {
+  background-color: #2980b9;
+  border-color: #2980b9;
+}
+
+.ant-layout-header {
+  background-color: #3498db; /* Deep sky blue header */
+  padding: 0 20px;
+}
+
+.ant-layout-sider {
+  background-color: #ffffff; /* White sidebar */
+}
+
+.ant-menu-light .ant-menu-item-selected {
+  color: #3498db !important;
+}
+
+.ant-menu-light .ant-menu-item-selected::after {
+  border-right: 3px solid #3498db !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #2c3e50; /* Darker color for headings */
+}
+
+a {
+  color: #3498db;
+}
+
+a:hover {
+  color: #2980b9;
+}
